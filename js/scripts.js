@@ -21,20 +21,25 @@ for (var i = 0; i < word.length; i++) {
 console.log(answerArray);
 
 var remainingLetters = word.length;
-var wrongInput = 5;
+var wrongInput = 0;
 
-for (var count=0; count<1000;count++){
+for(wrongInput = 0){
     //show player therir progress with answer array[] contacination
     alert(answerArray.join(" "));
 
     //get a guess from player
-    var guess = prompt("Guess a letter or click cancelto stp playing");
+    var guess = prompt("Guess a letter or click cancel to stop playing");
 
     for(var j=0;j<word.length;j++){
         if(word[j] === guess){
             answerArray[j] = guess;
             remainingLetters--;
-        }
+        }  
         
     }
 }
+
+if(remainingLetters == 0){
+    alert(answerArray.join(" "));
+    alert("Goodjob!! the answer is"+word);
+}else 
