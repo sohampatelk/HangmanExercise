@@ -6,7 +6,9 @@ var words = [
 ];
 
 // Pick a random word from upper array
-var word = words[Math.floor(Math.random() * words.length)];
+var word = words[Math.floor(Math.random() * words.length)]; 
+
+//var word = prompt("What word you would like to give user for Hangman game:");
 
 // Set up the answer array for picked word for design "-------"" 
 var answerArray = [];
@@ -42,7 +44,7 @@ while(wrongInput>0 && remainingLetters>0){
 
 if(remainingLetters == 0){
     alert(answerArray.join(" "));
-    alert("Goodjob!! the answer is"+word);
+    alert("Goodjob!! the answer is"+ word);
 }else if(wrongInput == 0){
     alert("You fail");
 }
